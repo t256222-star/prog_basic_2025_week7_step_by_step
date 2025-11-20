@@ -19,6 +19,7 @@ GitHub Classroom の提出用テンプレートとは異なるため、**提出�
 - `step5_remaining_ui`  
   - 残り回数の表示を追加したバージョン
 
+課題の穴埋めファイル　assignment3_number_game_穴埋め.py
 ---
 
 ## 📘 使用方法
