@@ -19,7 +19,7 @@ def ask_int(prompt: str) -> int:
         try:
             # TODO1-1: 文字列 s を整数に変換して n に代入する
             # ヒント: n = int(s)
-            n = ...  # ← ここを書き換える
+            n = int(s)  # ← ここを書き換える
 
             # TODO1-2: 正しく変換できたら n を返す
             return n
@@ -37,7 +37,7 @@ def play() -> None:
 
     # TODO2: 正解の数を 1〜100 の乱数で決めよう
     # ヒント: random.randint(1, 100) を使う
-    answer = ...  # ← ここを書き換える
+    answer = random.randint(1~100)  # ← ここを書き換える
 
     # 試行回数カウンタ
     tries = 0
@@ -48,21 +48,21 @@ def play() -> None:
     while tries < MAX_TRIES:
         # TODO3-1: ユーザから予想した数を整数として受け取る
         # ヒント: ask_int("予想した数: ") を使う
-        guess = ...  # ← ここを書き換える
+        guess = ask_int  # ← ここを書き換える
 
         # TODO3-2: 有効な入力が1回行われたので tries を1増やす
         # ヒント: tries += 1
-        tries = ...  # ← ここを書き換える
+        tries += 1  # ← ここを書き換える
 
         # TODO4: guess と answer を比較してメッセージを出す
         #  - 等しいとき  : 「正解！」＋回数を表示してゲーム終了
         #  - 小さすぎるとき: 「もっと大きいです。」と表示
         #  - 大きすぎるとき: 「もっと小さいです。」と表示
 
-        if ...:  # TODO4-1: 正解だったときの条件（例: guess == answer）
+        if guess == answer:  # TODO4-1: 正解だったときの条件（例: guess == answer）
             print(f"正解！{tries}回で当たりました！")
             return
-        elif ...:  # TODO4-2: 小さすぎるときの条件（例: guess < answer）
+        elif guess < answer:  # TODO4-2: 小さすぎるときの条件（例: guess < answer）
             print("もっと大きいです。")
         else:      # TODO4-3: 上の2つ以外（大きすぎる）のとき
             print("もっと小さいです。")
